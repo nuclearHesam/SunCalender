@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SunCalender", "SunCalender\SunCalender.csproj", "{A4BE230A-DE5B-40B5-A7B9-D091FDA23939}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A4BE230A-DE5B-40B5-A7B9-D091FDA23939}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4BE230A-DE5B-40B5-A7B9-D091FDA23939}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4BE230A-DE5B-40B5-A7B9-D091FDA23939}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4BE230A-DE5B-40B5-A7B9-D091FDA23939}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CF0FB78E-040C-43E8-9FDE-9F597C173079}
+	EndGlobalSection
+EndGlobal
