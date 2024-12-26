@@ -10,8 +10,6 @@ public partial class Form1 : Form
     {
         InitializeComponent();
     }
-
-    // Array of Persian month names
     private readonly string[] persianMonths =
     [
         "فروردین",
@@ -27,11 +25,9 @@ public partial class Form1 : Form
         "بهمن",
         "اسفند",
     ];
-
-    // Array of Persian day names
     private readonly string[] persianDayofWeek =
-    [
-        "یکشنبه",
+        [
+            "یکشنبه",
         "دوشنبه",
         "سه شنبه",
         "چهارشنبه",
@@ -39,8 +35,6 @@ public partial class Form1 : Form
         "جمعه",
         "شنبه",
     ];
-
-    // Stores the last updated day
     private int lastday = 0;
 
     // Event triggered when the form loads
@@ -129,5 +123,10 @@ public partial class Form1 : Form
     {
         e.Cancel = true;
         this.Hide();
+    }
+
+    private void pictureBox1_Click(object sender, EventArgs e)
+    {
+        SetDate();
     }
 }

@@ -49,10 +49,11 @@
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             pictureBox1.WaitOnLoad = true;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // datetime
             // 
-            datetime.Font = new Font("dana demibold", 18F);
+            datetime.Font = new Font("dana demibold", 13F, FontStyle.Bold);
             datetime.Location = new Point(12, 226);
             datetime.Name = "datetime";
             datetime.RightToLeft = RightToLeft.Yes;
@@ -62,13 +63,13 @@
             // 
             // richTextBox1
             // 
-            richTextBox1.Font = new Font("dana", 12F, FontStyle.Regular, GraphicsUnit.Point, 178);
+            richTextBox1.Font = new Font("dana", 12F);
             richTextBox1.Location = new Point(12, 275);
             richTextBox1.Name = "richTextBox1";
             richTextBox1.ReadOnly = true;
             richTextBox1.Size = new Size(350, 200);
             richTextBox1.TabIndex = 2;
-            richTextBox1.Text = "";
+            richTextBox1.Text = "Loading";
             // 
             // timer1
             // 
@@ -85,12 +86,13 @@
             // 
             // Lbl_Dollar
             // 
-            Lbl_Dollar.Font = new Font("dana medium", 18F);
+            Lbl_Dollar.Font = new Font("dana demibold", 13F, FontStyle.Bold);
             Lbl_Dollar.Location = new Point(12, 478);
             Lbl_Dollar.Name = "Lbl_Dollar";
             Lbl_Dollar.RightToLeft = RightToLeft.Yes;
             Lbl_Dollar.Size = new Size(350, 46);
             Lbl_Dollar.TabIndex = 3;
+            Lbl_Dollar.Text = "Loading";
             Lbl_Dollar.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // Form1
@@ -103,12 +105,12 @@
             Controls.Add(datetime);
             Controls.Add(pictureBox1);
             Font = new Font("Vazir", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
             Margin = new Padding(4);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "Form1";
             RightToLeft = RightToLeft.Yes;
-            RightToLeftLayout = true;
             ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "تاریخ";

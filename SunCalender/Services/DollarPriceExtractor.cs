@@ -1,4 +1,6 @@
 ﻿using HtmlAgilityPack;
+using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace SunCalender.Services;
 
@@ -9,7 +11,7 @@ public static class DollarPriceExtractor
     public static int ExtractPrice()
     {
         var web = new HtmlWeb();
-        var doc =  web.Load(url);
+        var doc = web.Load(url);
 
         var priceNode = doc.DocumentNode.SelectSingleNode("//input[@id='convertInput']");
 
