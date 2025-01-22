@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
-using SunCalender.Models;
+using Services.Models;
 
-namespace SunCalender.Services;
+namespace Services;
 
 public class Api
 {

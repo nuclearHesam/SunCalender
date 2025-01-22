@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calender.MainPage"
+             Loaded="ContentPage_Loaded"
+             FlowDirection="RightToLeft">
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Image x:Name="SeasonImage"
+               IsAnimationPlaying="True"
+               Grid.Row="0"/>
+
+        <Label x:Name="datetime" 
+               FontFamily="dana demibold"
+               Grid.Row="1" 
+               VerticalTextAlignment="Center"
+               HorizontalOptions="Center"
+               FontAttributes="Bold"
+               FontSize="25"/>
+
+        <Editor x:Name="events"
+                FontFamily="dana demibold"
+                Grid.Row="2"
+                IsReadOnly="True"
+                Text="Loading"/>
+
+        <Label x:Name="dollar" 
+               FontFamily="dana demibold"
+               Grid.Row="3"
+                              VerticalTextAlignment="Start"
+               HorizontalOptions="Center"
+               FontAttributes="Bold"
+                FontSize="23"
+               Text="Loading"/>
+
+    </Grid>
+</ContentPage>

@@ -49,7 +49,7 @@
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             pictureBox1.WaitOnLoad = true;
-            pictureBox1.Click += pictureBox1_Click;
+            pictureBox1.Click += PictureBox1_Click;
             // 
             // datetime
             // 
@@ -106,12 +106,12 @@
             Controls.Add(pictureBox1);
             Font = new Font("Vazir", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.FixedDialog;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "Form1";
             RightToLeft = RightToLeft.Yes;
-            ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "تاریخ";
             FormClosing += Form1_FormClosing;

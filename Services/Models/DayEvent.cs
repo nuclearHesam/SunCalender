@@ -1,5 +1,5 @@
 ﻿
-namespace SunCalender.Models;
+namespace Services.Models;
 
 public class Event
 {

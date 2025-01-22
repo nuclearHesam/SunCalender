@@ -1,8 +1,6 @@
 ﻿using HtmlAgilityPack;
-using System.Net.Http;
-using System.Threading.Tasks;
 
-namespace SunCalender.Services;
+namespace Services;
 
 public static class DollarPriceExtractor
 {

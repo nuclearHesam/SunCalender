@@ -1,6 +1,6 @@
 using System.Globalization;
-using SunCalender.Models;
-using SunCalender.Services;
+using Services.Models;
+using Services;
 
 namespace SunCalender;
 
@@ -10,42 +10,17 @@ public partial class Form1 : Form
     {
         InitializeComponent();
     }
-    private readonly string[] persianMonths =
-    [
-        "فروردین",
-        "اردیبهشت",
-        "خرداد",
-        "تیر",
-        "مرداد",
-        "شهریور",
-        "مهر",
-        "آبان",
-        "آذر",
-        "دی",
-        "بهمن",
-        "اسفند",
-    ];
-    private readonly string[] persianDayofWeek =
-        [
-            "یکشنبه",
-        "دوشنبه",
-        "سه شنبه",
-        "چهارشنبه",
-        "پنجشنبه",
-        "جمعه",
-        "شنبه",
-    ];
     private int lastday = 0;
 
     // Event triggered when the form loads
-    private void Form1_Load(object sender, EventArgs e)
+    private async void Form1_Load(object sender, EventArgs e)
     {
-        SetDate(); // Initialize date and UI
+        await SetDate(); // Initialize date and UI
         timer1.Start(); // Start the timer
     }
 
     // Updates the UI with the current date and events
-    private async void SetDate()
+    private async Task SetDate()
     {
         PersianCalendar pc = new();
 
@@ -54,9 +29,9 @@ public partial class Form1 : Form
         if (day != lastday)
         {
             // Update date, time, and display it
-            string dayOfWeek = persianDayofWeek[(int)pc.GetDayOfWeek(DateTime.Now)];
+            string dayOfWeek = PersianDate.persianDayofWeek[(int)pc.GetDayOfWeek(DateTime.Now)];
             int month = pc.GetMonth(DateTime.Now);
-            string Month = persianMonths[month - 1];
+            string Month = PersianDate.persianMonths[month - 1];
             int year = pc.GetYear(DateTime.Now);
 
             // Determine season and update the image
@@ -90,10 +65,14 @@ public partial class Form1 : Form
                     }
                     richTextBox1.ForeColor = res.is_holiday ? Color.Red : Color.Black;
                 }
-            }
-            catch { richTextBox1.Text = "Connection issue"; }
 
-            lastday = day; // Update last day
+                lastday = day; // Update last day
+            }
+            catch
+            {
+                richTextBox1.Text = "Connection issue";
+                lastday = 0;
+            }
         }
 
         try
@@ -106,9 +85,9 @@ public partial class Form1 : Form
     }
 
     // Timer tick event to update date and events
-    private void Timer1_Tick(object sender, EventArgs e)
+    private async void Timer1_Tick(object sender, EventArgs e)
     {
-        SetDate();
+        await SetDate();
     }
 
     // Show the form when the notify icon is clicked
@@ -118,6 +97,11 @@ public partial class Form1 : Form
         this.Show();
     }
 
+    private async void PictureBox1_Click(object sender, EventArgs e)
+    {
+        await SetDate();
+    }
+
     // Prevent form from closing and hide it instead
     private void Form1_FormClosing(object sender, FormClosingEventArgs e)
     {
@@ -125,8 +109,4 @@ public partial class Form1 : Form
         this.Hide();
     }
 
-    private void pictureBox1_Click(object sender, EventArgs e)
-    {
-        SetDate();
-    }
 }
