@@ -1,6 +1,8 @@
 using System.Globalization;
 using Services.Models;
 using Services;
+using System.Drawing.Text;
+using System.Reflection;
 
 namespace SunCalender;
 
@@ -11,6 +13,8 @@ public partial class Form1 : Form
         InitializeComponent();
     }
     private int lastday = 0;
+
+    private PrivateFontCollection _fontCollection = new();
 
     // Event triggered when the form loads
     private async void Form1_Load(object sender, EventArgs e)

@@ -41,10 +41,13 @@
             // 
             // pictureBox1
             // 
+            pictureBox1.Cursor = Cursors.Hand;
+            pictureBox1.Dock = DockStyle.Top;
             pictureBox1.Image = Properties.Resources.winter;
-            pictureBox1.Location = new Point(12, 12);
+            pictureBox1.Location = new Point(0, 0);
+            pictureBox1.Margin = new Padding(0);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(350, 211);
+            pictureBox1.Size = new Size(373, 211);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
@@ -53,21 +56,26 @@
             // 
             // datetime
             // 
-            datetime.Font = new Font("dana demibold", 13F, FontStyle.Bold);
-            datetime.Location = new Point(12, 226);
+            datetime.Dock = DockStyle.Top;
+            datetime.Font = new Font("Segoe UI", 13.2000008F, FontStyle.Bold);
+            datetime.Location = new Point(0, 211);
+            datetime.Margin = new Padding(0);
             datetime.Name = "datetime";
             datetime.RightToLeft = RightToLeft.Yes;
-            datetime.Size = new Size(350, 46);
+            datetime.Size = new Size(373, 51);
             datetime.TabIndex = 1;
+            datetime.Text = "Date";
             datetime.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // richTextBox1
             // 
-            richTextBox1.Font = new Font("dana", 12F);
-            richTextBox1.Location = new Point(12, 275);
+            richTextBox1.Dock = DockStyle.Top;
+            richTextBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 178);
+            richTextBox1.Location = new Point(0, 262);
+            richTextBox1.Margin = new Padding(0);
             richTextBox1.Name = "richTextBox1";
             richTextBox1.ReadOnly = true;
-            richTextBox1.Size = new Size(350, 200);
+            richTextBox1.Size = new Size(373, 216);
             richTextBox1.TabIndex = 2;
             richTextBox1.Text = "Loading";
             // 
@@ -86,28 +94,29 @@
             // 
             // Lbl_Dollar
             // 
-            Lbl_Dollar.Font = new Font("dana demibold", 13F, FontStyle.Bold);
-            Lbl_Dollar.Location = new Point(12, 478);
+            Lbl_Dollar.Dock = DockStyle.Top;
+            Lbl_Dollar.Font = new Font("Segoe UI", 13.2000008F, FontStyle.Bold);
+            Lbl_Dollar.Location = new Point(0, 478);
             Lbl_Dollar.Name = "Lbl_Dollar";
             Lbl_Dollar.RightToLeft = RightToLeft.Yes;
-            Lbl_Dollar.Size = new Size(350, 46);
+            Lbl_Dollar.Size = new Size(373, 45);
             Lbl_Dollar.TabIndex = 3;
             Lbl_Dollar.Text = "Loading";
             Lbl_Dollar.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(10F, 27F);
+            AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(374, 534);
+            ClientSize = new Size(373, 531);
             Controls.Add(Lbl_Dollar);
             Controls.Add(richTextBox1);
             Controls.Add(datetime);
             Controls.Add(pictureBox1);
-            Font = new Font("Vazir", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Font = new Font("Tahoma", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(4);
+            Margin = new Padding(4, 3, 4, 3);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "Form1";
