@@ -6,10 +6,10 @@ public static class DollarPriceExtractor
 {
     private static readonly string url = "https://alanchand.com/currencies-price/usd";
 
-    public static int ExtractPrice()
+    public async static Task<int> ExtractPrice()
     {
         var web = new HtmlWeb();
-        var doc = web.Load(url);
+        var doc = await web.LoadFromWebAsync(url);
 
         var priceNode = doc.DocumentNode.SelectSingleNode("//input[@id='convertInput']");
 

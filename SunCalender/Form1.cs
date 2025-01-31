@@ -62,16 +62,16 @@ public partial class Form1 : Form
                 datetime.Text = date;
 
                 DayEvent res = await Api.GetResponse(new DateTime(year, month, day));
-                richTextBox1.Text = res?.events.Count > 0
-                    ? string.Join("\n", res.events.Select((e, i) => $"{i + 1}. {e.description.ChangeChars()}"))
+                richTextBox1.Text = res?.events.Count > 0 ? string.Join("\n", res.events.Select((e, i) => $"{i + 1}. {e.description}")).ChangeChars()
                     : "خبری نیست!.";
-                
-                datetime.ForeColor = res?.is_holiday == true ? Color.DarkRed : Color.Black;
+
+                datetime.ForeColor = res?.is_holiday == true ? Color.Red : Color.Black;
 
                 lastday = day;
             }
 
-            Lbl_Dollar.Text = "دلار: " + DollarPriceExtractor.ExtractPrice().ToString("N0").ChangeChars();
+            int usdirr = await DollarPriceExtractor.ExtractPrice();
+            Lbl_Dollar.Text = "دلار: " + usdirr.ToString("N0").ChangeChars();
         }
         catch
         {

@@ -54,27 +54,28 @@
             // datetime
             // 
             datetime.Dock = DockStyle.Top;
-            datetime.Font = new Font("Segoe UI", 13.2000008F, FontStyle.Bold);
+            datetime.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
             datetime.Location = new Point(0, 211);
             datetime.Margin = new Padding(0);
             datetime.Name = "datetime";
             datetime.RightToLeft = RightToLeft.Yes;
-            datetime.Size = new Size(373, 51);
+            datetime.Size = new Size(373, 56);
             datetime.TabIndex = 1;
-            datetime.Text = "Date";
+            datetime.Text = "تاریخ";
             datetime.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // richTextBox1
             // 
+            richTextBox1.BorderStyle = BorderStyle.FixedSingle;
             richTextBox1.Dock = DockStyle.Top;
-            richTextBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 178);
-            richTextBox1.Location = new Point(0, 262);
+            richTextBox1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 178);
+            richTextBox1.Location = new Point(0, 267);
             richTextBox1.Margin = new Padding(0);
             richTextBox1.Name = "richTextBox1";
             richTextBox1.ReadOnly = true;
-            richTextBox1.Size = new Size(373, 216);
+            richTextBox1.Size = new Size(373, 211);
             richTextBox1.TabIndex = 2;
-            richTextBox1.Text = "Loading";
+            richTextBox1.Text = "درحال بارگزاری";
             // 
             // notifyIcon1
             // 
@@ -86,25 +87,25 @@
             // Lbl_Dollar
             // 
             Lbl_Dollar.Dock = DockStyle.Top;
-            Lbl_Dollar.Font = new Font("Segoe UI", 13.2000008F, FontStyle.Bold);
+            Lbl_Dollar.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
             Lbl_Dollar.Location = new Point(0, 478);
             Lbl_Dollar.Name = "Lbl_Dollar";
             Lbl_Dollar.RightToLeft = RightToLeft.Yes;
-            Lbl_Dollar.Size = new Size(373, 45);
+            Lbl_Dollar.Size = new Size(373, 49);
             Lbl_Dollar.TabIndex = 3;
-            Lbl_Dollar.Text = "Loading";
+            Lbl_Dollar.Text = "درحال بارگزاری";
             Lbl_Dollar.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(9F, 21F);
+            AutoScaleDimensions = new SizeF(9F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(373, 531);
+            ClientSize = new Size(373, 530);
             Controls.Add(Lbl_Dollar);
             Controls.Add(richTextBox1);
             Controls.Add(datetime);
             Controls.Add(pictureBox1);
-            Font = new Font("Tahoma", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4, 3, 4, 3);
