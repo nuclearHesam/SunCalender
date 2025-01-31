@@ -1,7 +1,6 @@
 using System.Globalization;
 using Services.Models;
 using Services;
-using System.Drawing;
 
 namespace SunCalender;
 
@@ -66,7 +65,8 @@ public partial class Form1 : Form
                 richTextBox1.Text = res?.events.Count > 0
                     ? string.Join("\n", res.events.Select((e, i) => $"{i + 1}. {e.description.ChangeChars()}"))
                     : "خبری نیست!.";
-                richTextBox1.ForeColor = res?.is_holiday == true ? Color.Red : Color.Black;
+                
+                datetime.ForeColor = res?.is_holiday == true ? Color.DarkRed : Color.Black;
 
                 lastday = day;
             }
