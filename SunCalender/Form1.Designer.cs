@@ -33,7 +33,6 @@
             pictureBox1 = new PictureBox();
             datetime = new Label();
             richTextBox1 = new RichTextBox();
-            timer1 = new System.Windows.Forms.Timer(components);
             notifyIcon1 = new NotifyIcon(components);
             Lbl_Dollar = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -78,12 +77,6 @@
             richTextBox1.Size = new Size(373, 216);
             richTextBox1.TabIndex = 2;
             richTextBox1.Text = "Loading";
-            // 
-            // timer1
-            // 
-            timer1.Enabled = true;
-            timer1.Interval = 3600000;
-            timer1.Tick += Timer1_Tick;
             // 
             // notifyIcon1
             // 
@@ -133,7 +126,6 @@
         private PictureBox pictureBox1;
         private Label datetime;
         private RichTextBox richTextBox1;
-        private System.Windows.Forms.Timer timer1;
         private NotifyIcon notifyIcon1;
         private Label Lbl_Dollar;
     }
