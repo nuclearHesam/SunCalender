@@ -24,7 +24,7 @@ public partial class Form1 : Form
     {
         while (true)
         {
-            await Task.Delay(60000);
+            await Task.Delay(3600000);
             await SetDate();
         }
     }
@@ -62,10 +62,12 @@ public partial class Form1 : Form
                 datetime.Text = date;
 
                 DayEvent res = await Api.GetResponse(new DateTime(year, month, day));
-                richTextBox1.Text = res?.events.Count > 0 ? string.Join("\n", res.events.Select((e, i) => $"{i + 1}. {e.description}")).ChangeChars()
-                    : "خبری نیست!.";
+                res.RemoveDuplicateDescriptions();
 
-                datetime.ForeColor = res?.is_holiday == true ? Color.Red : Color.Black;
+                richTextBox1.Text = res.events.Count > 0 
+                    ? string.Join("\n", res.events.Select((e, i) => $"{i + 1}. {e.description}")).ChangeChars()
+                    : "خبری نیست!.";
+                richTextBox1.ForeColor = res.is_holiday == true ? Color.Red : Color.Black;
 
                 lastday = day;
             }
@@ -75,18 +77,16 @@ public partial class Form1 : Form
         }
         catch
         {
-            richTextBox1.Text = "مشکل اتصال!";
-            Lbl_Dollar.Text = "قیمت دردسترس نیست!";
+            lastday = 0;
+            //richTextBox1.Text = "مشکل اتصال!";
+            //Lbl_Dollar.Text = "قیمت دردسترس نیست!";
         }
     }
 
     private void NotifyIcon1_Click(object sender, EventArgs e)
     {
-        if (this.WindowState == FormWindowState.Minimized)
-        {
-            this.WindowState = FormWindowState.Normal;
-            this.Show();
-        }
+        this.WindowState = FormWindowState.Normal;
+        this.Show();
     }
 
     private async void PictureBox1_Click(object sender, EventArgs e)
@@ -96,10 +96,7 @@ public partial class Form1 : Form
 
     private void Form1_FormClosing(object sender, FormClosingEventArgs e)
     {
-        if (e.CloseReason == CloseReason.UserClosing)
-        {
-            e.Cancel = true;
-            this.Hide();
-        }
+        e.Cancel = true;
+        this.Hide();
     }
 }

@@ -68,7 +68,7 @@
             // 
             richTextBox1.BorderStyle = BorderStyle.FixedSingle;
             richTextBox1.Dock = DockStyle.Top;
-            richTextBox1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 178);
+            richTextBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             richTextBox1.Location = new Point(0, 267);
             richTextBox1.Margin = new Padding(0);
             richTextBox1.Name = "richTextBox1";
