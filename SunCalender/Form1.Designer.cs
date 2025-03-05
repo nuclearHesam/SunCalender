@@ -54,7 +54,7 @@
             // datetime
             // 
             datetime.Dock = DockStyle.Top;
-            datetime.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
+            datetime.Font = new Font("dana", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point, 178);
             datetime.Location = new Point(0, 211);
             datetime.Margin = new Padding(0);
             datetime.Name = "datetime";
@@ -68,7 +68,7 @@
             // 
             richTextBox1.BorderStyle = BorderStyle.FixedSingle;
             richTextBox1.Dock = DockStyle.Top;
-            richTextBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            richTextBox1.Font = new Font("dana", 12F, FontStyle.Regular, GraphicsUnit.Point, 178);
             richTextBox1.Location = new Point(0, 267);
             richTextBox1.Margin = new Padding(0);
             richTextBox1.Name = "richTextBox1";
@@ -87,7 +87,7 @@
             // Lbl_Dollar
             // 
             Lbl_Dollar.Dock = DockStyle.Top;
-            Lbl_Dollar.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
+            Lbl_Dollar.Font = new Font("dana", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point, 178);
             Lbl_Dollar.Location = new Point(0, 478);
             Lbl_Dollar.Name = "Lbl_Dollar";
             Lbl_Dollar.RightToLeft = RightToLeft.Yes;
